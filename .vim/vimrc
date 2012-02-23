@@ -21,10 +21,20 @@ set shiftwidth=4            "Indent to four spaces
 set hidden                  "Switch between unsaved buffers w/o needing to save, preserves history
 filetype indent on          "Syntax Highlight
 filetype plugin on          "Needed for snipMate
-set autoindent              "Autoindent
-set expandtab               "Use spaces instead of tabs
 "Ignore these files when completing names
 set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
+"Easy quitting
+command WQ wq
+command Wq wq
+command W w
+command Q q
+"Save state
+set viewoptions=folds,cursor
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
+au BufNewFile,BufRead *.less set filetype=css
+"Easier exit from insert mode
+inoremap jk <Esc>
 
 "------  Searching  ------
 set incsearch               "Search while typing
