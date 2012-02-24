@@ -10,7 +10,6 @@ au FileType php set omnifunc=phpcomplete#CompletePHP
 set guioptions-=T           "remove toolbar
 syntax on                   "Enables syntax highlighting
 set nu                      "Enable Line Numbers
-set nowrap                  "Disable word wrap
 set vb                      "Visual bell instead of beeps
 set ruler                   "Displays cursor position on bottom right of screen
 set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ \ %-14.(%l,%c%V%)\ %P
@@ -35,6 +34,8 @@ au BufWinEnter * silent! loadview
 au BufNewFile,BufRead *.less set filetype=css
 "Easier exit from insert mode
 inoremap jk <Esc>
+nnoremap j gj
+nnoremap k gk
 
 "------  Searching  ------
 set incsearch               "Search while typing
