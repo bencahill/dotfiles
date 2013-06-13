@@ -1,2 +1,14 @@
 /*
-!.*
+!.vim/
+.vim/view/
+!.bash_profile
+!.bashrc
+!.gitconfig
+!.gitignore
+!.gitmodules
+!.inputrc
+!.libao
+!.tmux.conf
+!.vimrc
+!.Xdefaults
+!.Xresources

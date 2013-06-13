@@ -1,0 +1,90 @@
+! ----------------------------------------------------------------------------
+! file:     ~/.Xdefaults
+! author:   Benjamin Cahill
+! modified: April 2011
+! ----------------------------------------------------------------------------
+!
+
+urxvt.perl-ext-common: default,matcher
+urxvt.urlLauncher:     /usr/bin/opera
+urxvt.matcher.button:  1
+
+urxvt*iso14755_52: false
+!urxvt*depth:32
+!urxvt*background:rgb:1000/1000/1000/dddd
+urxvt*scrollstyle:plain
+!!urxvt*foreground:#CCCCCC
+
+!urxvt*background: #151515
+urxvt.urgentOnBell: true
+urxvt*internalBorder:3
+urxvt*scrollBar_right:true
+!urxvt.perl-ext-common:	default,keyboard-select
+!urxvt.keysum.M-Escape:	perl:keyboard-select:activate
+!urxvt.keysum.M-s:	perl:keyboard-select:search
+! urxvt*transparent:true
+! urxvt*shading:25
+!urxvt*tintColor:#002b36
+! URxvt.font:6x11
+! urxvt*font: xft:Terminus:fontsize=10
+! urxvt*font: -*-envy code r-*-*-*-*-10-*-*-*-*-*-*-*
+! urxvt*font: xft:Envy Code R:size=10
+!urxvt.font:     -*-marathonmod-*-*-*-*-*-*-*-*-*-*-*-*
+! urxvt.font:     -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
+urxvt.font:     -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
+! urxvt.font:     -*-tamsyn-medium-r-*-*-12-*-*-*-*-*-*-*
+! urxvt.boldFont:     -*-tamsyn-bold-r-*-*-12-*-*-*-*-*-*-*
+! urxvt.font:     -*-gohufont-medium-r-*-*-11-*-*-*-*-*-*-*
+! urxvt*boldFont:     -*-gohufont-bold-r-*-*-11-*-*-*-*-*-*-*
+! urxvt*font: xft:Terminus:fontsize=10:weight=80
+! urxvt*boldFont: xft:Terminus:fontsize=10:weight=200
+! URxvt.font: xft:Terminus:pixelsize=10:bold
+! URxvt*boldFont: xft:Terminus:pixelsize=10:weight=200
+! URxvt.font: xft:gohufont:pixelsize=12:width=5
+! URxvt.boldFont: xft:Tamsyn:pixelsize=12:weight=200
+! URxvt*boldFont: xft:Terminus:pixelsize=10:weight=200
+urxvt.geometry: 100x35
+
+URxvt.perl-ext:      default,url-select
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.urlLauncher:   firefox
+URxvt.underlineURLs: true
+
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+!!urxvt*color0:    #6c6c6c
+!!urxvt*color1:    #e9897c
+!!urxvt*color2:    #b6e77d
+!!urxvt*color3:    #ecebbe
+!!!urxvt*color4:    #a9cdeb
+!!urxvt*color4:    #4889c4
+!!urxvt*color5:    #ea96eb
+!!urxvt*color6:    #c9caec
+!!urxvt*color7:    #f2f2f2
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+!!urxvt*color8:    #747474
+!!urxvt*color9:    #f99286
+!!urxvt*color10:    #c3f786
+!!urxvt*color11:    #fcfbcc
+!!urxvt*color12:    #b6defb
+!!urxvt*color13:    #fba1fb
+!!urxvt*color14:    #d7d9fc
+!!urxvt*color15:    #e2e2e2

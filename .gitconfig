@@ -1,0 +1,13 @@
+[user]
+	name = Benjamin Cahill
+	email = ben@benjamincahill.com
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[core]
+	editor = vim
+[merge]
+    tool = vimdiff
+[alias]
+    ac = !git add -A && git commit
