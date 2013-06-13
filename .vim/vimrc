@@ -1,3 +1,4 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()      "Executes the pathogen plugin, which loads other plugins
 let mapleader=","           "Changes Leader key into a comma instead of a backslash
 set nocompatible            "Prefents VIM from being nerfed into acting like VI
@@ -51,13 +52,6 @@ noremap <leader>a :Ack
 let NERDTreeIgnore=['CVS']
 let NERDTreeChDirMode=2     "setting root dir in NT also sets VIM's cd
 noremap <silent> <Leader>n :NERDTreeToggle<CR>
-
-"------  Tagbar Options  ------
-" http://adamyoung.net/Exuberant-Ctags-OS-X
-" http://www.vim.org/scripts/script.php?script_id=273
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-let g:tagbar_width=26
-noremap <silent> <Leader>y :TagbarToggle<CR>
 
 "------  Buffers  ------
 " Ctrl Left & Right move between buffers
@@ -137,32 +131,18 @@ map <Leader>P :! php -q %<CR>
 
 map <Leader>? :Helptags<CR>
 
-if has("gui_running")
-    set cursorline                  "Highlight background of current line
-    autocmd VimEnter * NERDTree     "run nerdtree
-    autocmd VimEnter * TagbarOpen
-    "autocmd VimEnter * wincmd p    "cursor to right panel instead of NERDTree
-    colorscheme ir_black            "Cool color scheme
+set cursorline                  "Highlight background of current line
 
-    " Show tabs and newline characters with ,s
-    nmap <Leader>s :set list!<CR>
-    set listchars=tab:▸\ ,eol:¬
-    "Invisible character colors
-    highlight NonText guifg=#4a4a59
-    highlight SpecialKey guifg=#4a4a59
-else
-    colorscheme darkblue        "Default VIM colorscheme which works in terminals
-endif
+" Show tabs and newline characters with ,s
+nmap <Leader>s :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
-if has("gui_macvim") "Use Experimental Renderer option must be enabled for transparencY
-    set transparency=15
-    set guifont=Monaco:h10
-    set noantialias " I like my Monaco this way ;D
-    " Swipe to move between bufers :D
-    map <SwipeLeft> :bprev<CR>
-    map <SwipeRight> :bnext<CR>
-endif
+colorscheme ir_black            "Cool color scheme
 
-if filereadable($HOME.'/.vimrc_local')
-    source $HOME/.vimrc_local
-endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+set ffs=unix
+set scrolloff=2
